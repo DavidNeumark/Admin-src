@@ -1,0 +1,26 @@
+<h4>Create Customer:</h4><br>
+<form>
+    <div class="form-group row">
+        <label for="comment" class="col-sm-2 col-form-label">Enter Customer Name:</label>
+        <div class="col-sm-3">
+        <input name="custNameTXT" type="text" class="form-control" [(ngModel)]="newCustomer.custName" />
+    </div>
+    </div>
+    <div class="form-group row">
+        <label for="comment" class="col-sm-2 col-form-label">Enter Password:</label>
+        <div class="col-sm-3">
+        <input name="custPasswordTXT" type="password" class="form-control" [(ngModel)]="newCustomer.password" />
+    </div>
+    </div>
+    <div class="form-group row">
+        <label for="comment" class="col-sm-2 col-form-label">Enter Email:</label>
+        <div class="col-sm-3">
+        <input name="custEmailTXT" type="email" class="form-control" [(ngModel)]="newCustomer.custEmail" />
+    </div>
+    </div>
+    
+<div class="col-sm-3">
+<button class="btn btn-primary" (click)="createCustomer()" >Create Now!</button><br><br>
+</div>
+</form>
+<hr>

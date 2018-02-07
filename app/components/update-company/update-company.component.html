@@ -1,0 +1,39 @@
+<form>
+    <h3>Update Company:</h3><br>
+        <div class="form-group">
+            <div class="col-sm-3">
+                    <label for="listOfCompanies">Select a Company:</label>
+                <select 
+                    multiple 
+                    ngModel 
+                    name="listOfCompanies" 
+                    id="listOfCompanies" 
+                    class="form-control">
+                        <option 
+                            (click)="setCompany(c)"
+                            *ngFor="let c of _companies" 
+                            [value]="c.id">
+                                {{ c.compName }}
+                        </option>
+                </select>
+            </div>
+                    
+        </div>
+        <div class="form-group">
+                <div class="col-sm-3">
+            <label for="comment">Enter New Password</label>
+            <input name="newCompPasswordTXT" type="password" onfocus="this.value=''" class="form-control" [(ngModel)]="newCompany.password" />
+        </div>
+        </div>
+        <div class="form-group">
+                <div class="col-sm-3">
+            <label for="comment">Enter New Email</label>
+            <input name="newCompEmailTXT" type="email" onfocus="this.value=''" class="form-control" [(ngModel)]="newCompany.email" />
+        </div>
+        </div>
+    
+    <div class="col-sm-3">
+    <button class="btn btn-primary" (click)="updateCompany()" >Update Now!</button>
+    </div>
+    </form>
+  

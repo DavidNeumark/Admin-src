@@ -1,0 +1,37 @@
+<div class="table-responsive">
+    <form>
+        <div class="form-group">
+            <div class="col-sm-3">
+                <label for="listOfCustomers">Select a Customer:</label>
+                <select 
+                    multiple 
+                    ngModel 
+                    name="listOfCustomers" 
+                    id="listOfCustomers" 
+                    class="form-control">
+                        <option 
+                            (click)="setCustomer(c)"
+                             *ngFor="let c of _customers" 
+                             [ngValue]="c">
+                                {{ c.custName }}
+                        </option>
+                </select>
+            </div><br><br><br><br><br><br>
+        </div>
+    </form><br>
+
+<table class="table table-striped table-bordered" *ngIf="customerToGet.id != undefined" border="1">
+    <tr>
+        <th>#</th>
+        <th>Customer Name</th>    
+        <th>Customer Password</th>
+        <th>Customer Email</th>
+    </tr>
+    <tr>
+        <td>{{customerToGet.id}}</td>
+        <td>{{customerToGet.custName}}</td>
+        <td>{{customerToGet.password}}</td>
+        <td>{{customerToGet.custEmail}}</td>
+    </tr>
+</table>
+</div>

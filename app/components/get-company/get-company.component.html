@@ -1,0 +1,38 @@
+<div class="table-responsive">
+    <form>
+        <div class="form-group">
+            <div class="col-sm-3">
+                <label for="listOfCompanies">Select a Company:</label>
+                <select 
+                    multiple 
+                    ngModel 
+                    name="listOfCompanies" 
+                    id="listOfCompanies" 
+                    class="form-control">
+                        <option 
+                            (click)="setCompany(c)"
+                             *ngFor="let c of _companies" 
+                             [ngValue]="c">
+                                {{ c.compName }}
+                        </option>
+                </select>
+            </div><br><br><br><br><br><br>
+        </div>
+    </form><br>
+
+<table class="table table-striped table-bordered" *ngIf="companyToGet.id != undefined" border="1">
+    <tr>
+        <th>#</th>
+        <th>Company Name</th>    
+        <th>Company Password</th>
+        <th>Company Email</th>
+    </tr>
+    <tr>
+        <td>{{companyToGet.id}}</td>
+        <td>{{companyToGet.compName}}</td>
+        <td>{{companyToGet.password}}</td>
+        <td>{{companyToGet.email}}</td>
+    </tr>
+</table>
+</div>
+{{statusmessage}}

@@ -1,0 +1,36 @@
+<h3>Update Customer:</h3><br>
+<form>
+        <div class="form-group">
+                        <div class="col-sm-3">
+                                <label for="listOfCustomers">Select a Customer:</label>
+                            <select 
+                                multiple 
+                                ngModel 
+                                name="listOfCustomers" 
+                                id="listOfCustomers" 
+                                class="form-control">
+                                    <option 
+                                        (click)="setCustomer(c)"
+                                        *ngFor="let c of _customers" 
+                                        [value]="c.id">
+                                            {{ c.custName }}
+                                    </option>
+                            </select>
+                        </div>
+            </div>
+    <div class="form-group">
+            <div class="col-sm-3">
+        <label for="comment">Enter New Password</label>
+        <input name="newCustPasswordTXT" type="password" onfocus="this.value=''" class="form-control" [(ngModel)]="customerToUpdate.password" />
+    </div>
+    </div>
+    <div class="form-group">
+            <div class="col-sm-3">
+        <label for="comment">Enter New Email</label>
+        <input name="newCustEmailTXT" type="email" onfocus="this.value=''" class="form-control" [(ngModel)]="customerToUpdate.custEmail" />
+    </div>
+    </div>
+    <div class="col-sm-3">
+<button class="btn btn-primary" (click)="updateCustomer()" >Update Now!</button>
+</div>
+</form>

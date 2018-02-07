@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand" routerLink="/">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Company Resources</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" routerLink="getAllCompanies">Get All Companies</a>
+                  <a class="dropdown-item" routerLink="getCompany">Get Company</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" routerLink="createCompany">Create Company</a>
+                  <a class="dropdown-item" routerLink="updateCompany">Update Company</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customer Resources</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                      <a class="dropdown-item" routerLink="getAllCustomers">Get All Customers</a>
+                      <a class="dropdown-item" routerLink="getCustomer">Get Customer</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" routerLink="createCustomer">Create Customer</a>
+                      <a class="dropdown-item" routerLink="updateCustomer">Update Customer</a>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+          
+        </nav>
+       
+        <main role="main" class="container">
+      
+        </main>
+
+<router-outlet></router-outlet>

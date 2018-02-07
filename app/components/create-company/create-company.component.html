@@ -1,0 +1,24 @@
+<h4>Create Company:</h4><br>
+<form>
+    <div class="form-group row">
+        <label for="comment" class="col-sm-2 col-form-label">Enter Company Name:</label>
+        <div class="col-sm-3">
+        <input name="compNameTXT" type="text" class="form-control" [(ngModel)]="newCompany.compName" />
+    </div>
+    </div>
+    <div class="form-group row">
+        <label for="comment" class="col-sm-2 col-form-label">Enter Password:</label>
+        <div class="col-sm-3">        
+        <input name="compPasswordTXT" type="password" class="form-control col-sm" [(ngModel)]="newCompany.password" />
+    </div>
+    </div>
+    <div class="form-group row">
+        <label for="comment" class="col-sm-2 col-form-label">Enter Email:</label>
+        <div class="col-sm-3">
+        <input name="compEmailTXT" type="email" class="form-control" [(ngModel)]="newCompany.email" />
+    </div>
+    </div><br>
+<div class="col-sm-3">
+<button class="btn btn-primary" (click)="createCompany()" >Create Now!</button><br><br>
+</div>
+</form>
